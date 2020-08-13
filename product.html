@@ -1,0 +1,66 @@
+<html>
+  <head>
+    <title>
+      Image Gallery 
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <style>
+     .product-small-img img
+     {  
+       height: 92px;
+       width: 92px;
+       margin: 10px 0;
+       cursor: pointer;
+       display: block;
+       opacity: 0.6;
+
+     }
+     .product-small-img img:hover
+     {  
+      opacity: 1;
+
+     }
+     .product-small-img{
+
+       float: left;
+     }
+     .product
+     {
+       top: 50%;
+       left: 50%;
+       transform: translate(-50%,-50%);
+       position: absolute;
+     }
+     .img-container img
+     {
+       height: 500px;
+     }
+     .img-container{
+       float: right;
+       padding: 10px;
+     }
+    </style>
+  </head>
+  <body>
+    <div class="product">
+      <div class="product-small-img">
+        <img src="image\8e3c9c3017874d5f7c4f2b69bf273320.jpg" onclick="myFunction(this)">
+        <img src="image\photo-of-a-laptop-and-a-tablet-on-the-table-2528118.jpg" onclick="myFunction(this)">
+        <img src="image\apple-devices-cellphone-close-up-electronics-341523.jpg" onclick="myFunction(this)">
+       
+      </div>
+
+<div class= "img-container">
+  <img id="imagebox" src="image\8e3c9c3017874d5f7c4f2b69bf273320.jpg" alt="">
+
+</div>
+    </div>
+    <script>
+      function myFunction(smallImg){
+        var fullImg=document.getElementById("imagebox");
+        fullImg.src=smallImg.src;
+      }
+     </script>
+  </body>
+</html>
